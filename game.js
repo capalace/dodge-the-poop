@@ -37,6 +37,7 @@ class PoopGame {
 
         document.addEventListener('keydown', (e) => this.handleKeyDown(e));
         document.addEventListener('keyup', (e) => this.handleKeyUp(e));
+        document.addEventListener('keydown', (e) => this.handleSpaceBar(e));
 
         // Bind touch events to document to allow touch outside game screen
         document.addEventListener('touchstart', (e) => this.handleTouchStart(e), { passive: false });
@@ -117,6 +118,21 @@ class PoopGame {
             this.keys.left = false;
         } else if (e.key === 'ArrowRight') {
             this.keys.right = false;
+        }
+    }
+
+    handleSpaceBar(e) {
+        if (e.key === ' ' || e.code === 'Space') {
+            // Start button visible (game not started)
+            if (!this.gameOverlay.classList.contains('hidden')) {
+                e.preventDefault();
+                this.startGame();
+            }
+            // Restart button visible (game over)
+            else if (!this.gameOverOverlay.classList.contains('hidden')) {
+                e.preventDefault();
+                this.restartGame();
+            }
         }
     }
 
