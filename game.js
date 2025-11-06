@@ -49,8 +49,9 @@ class PoopGame {
     }
 
     handleTouchStart(e) {
-        // Allow touches on buttons
-        if (e.target.classList.contains('game-button')) {
+        // Allow touches on buttons and overlays
+        if (e.target.classList.contains('game-button') ||
+            e.target.closest('.game-overlay')) {
             return;
         }
 
@@ -70,8 +71,9 @@ class PoopGame {
     }
 
     handleTouchMove(e) {
-        // Allow touches on buttons
-        if (e.target.classList.contains('game-button')) {
+        // Allow touches on buttons and overlays
+        if (e.target.classList.contains('game-button') ||
+            e.target.closest('.game-overlay')) {
             return;
         }
 
@@ -91,8 +93,13 @@ class PoopGame {
     }
 
     handleTouchEnd(e) {
-        // Allow touches on buttons
-        if (e.target.classList.contains('game-button')) {
+        // Allow touches on buttons and overlays - DO NOT prevent default
+        if (e.target.classList.contains('game-button') ||
+            e.target.closest('.game-overlay')) {
+            return;
+        }
+
+        if (!this.gameRunning) {
             return;
         }
 
