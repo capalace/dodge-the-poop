@@ -1,0 +1,31 @@
+<svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="poopGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#6B4423;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#8B5A3C;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#5D3A1A;stop-opacity:1" />
+        </linearGradient>
+        <radialGradient id="highlight" cx="30%" cy="30%">
+            <stop offset="0%" style="stop-color:#A67C52;stop-opacity:0.5" />
+            <stop offset="100%" style="stop-color:#A67C52;stop-opacity:0" />
+        </radialGradient>
+    </defs>
+
+    <!-- 맨 아래 큰 덩어리 -->
+    <ellipse cx="25" cy="40" rx="22" ry="11" fill="url(#poopGradient)" stroke="#3D2817" stroke-width="2"/>
+
+    <!-- 중간 덩어리 -->
+    <ellipse cx="25" cy="28" rx="17" ry="9" fill="url(#poopGradient)" stroke="#3D2817" stroke-width="2"/>
+
+    <!-- 위 덩어리 -->
+    <ellipse cx="23" cy="18" rx="12" ry="7" fill="url(#poopGradient)" stroke="#3D2817" stroke-width="2"/>
+
+    <!-- 끝부분 (휘어진 끝) -->
+    <ellipse cx="19" cy="11" rx="7" ry="5" fill="url(#poopGradient)" stroke="#3D2817" stroke-width="1.8"/>
+
+    <!-- 하이라이트 (중간) -->
+    <ellipse cx="18" cy="28" rx="5" ry="8" fill="url(#highlight)"/>
+
+    <!-- 하이라이트 (아래) -->
+    <ellipse cx="20" cy="37" rx="6" ry="5" fill="url(#highlight)"/>
+</svg>

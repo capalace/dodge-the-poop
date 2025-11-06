@@ -1,0 +1,19 @@
+<svg width="60" height="80" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+    <!-- 머리 (작은 원) -->
+    <circle cx="30" cy="12" r="7" fill="none" stroke="#000" stroke-width="2"/>
+
+    <!-- 몸통 -->
+    <line x1="30" y1="19" x2="30" y2="45" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- 왼팔 -->
+    <polyline points="30,28 22,32 18,38" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- 오른팔 -->
+    <polyline points="30,28 38,32 42,38" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- 왼쪽 다리 -->
+    <polyline points="30,45 24,58 20,68" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- 오른쪽 다리 -->
+    <polyline points="30,45 36,58 40,68" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

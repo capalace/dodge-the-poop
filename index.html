@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DODGE THE POOP!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="score-board">SCORE: <span id="score">0</span></div>
+
+        <div class="game-screen" id="gameScreen">
+            <div class="character" id="character"></div>
+        </div>
+
+        <div class="game-overlay" id="gameOverlay">
+            <div class="overlay-content">
+                <h1>DODGE THE POOP!</h1>
+                <button class="game-button" id="startButton">START</button>
+            </div>
+        </div>
+
+        <div class="game-overlay hidden" id="gameOverOverlay">
+            <div class="overlay-content">
+                <h1>GAME OVER!</h1>
+                <p class="final-score">FINAL SCORE: <span id="finalScore">0</span></p>
+                <button class="game-button" id="restartButton">RESTART</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
