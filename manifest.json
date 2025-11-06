@@ -1,0 +1,18 @@
+{
+  "name": "Dodge The Poop",
+  "short_name": "DodgePoop",
+  "description": "A fun game to dodge falling poops!",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#87CEEB",
+  "theme_color": "#87CEEB",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "character.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

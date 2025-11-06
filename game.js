@@ -38,9 +38,11 @@ class PoopGame {
         document.addEventListener('keydown', (e) => this.handleKeyDown(e));
         document.addEventListener('keyup', (e) => this.handleKeyUp(e));
 
-        this.gameScreen.addEventListener('touchstart', (e) => this.handleTouchStart(e));
-        this.gameScreen.addEventListener('touchend', (e) => this.handleTouchEnd(e));
-        this.gameScreen.addEventListener('touchcancel', (e) => this.handleTouchEnd(e));
+        // Bind touch events to document to allow touch outside game screen
+        document.addEventListener('touchstart', (e) => this.handleTouchStart(e), { passive: false });
+        document.addEventListener('touchmove', (e) => this.handleTouchMove(e), { passive: false });
+        document.addEventListener('touchend', (e) => this.handleTouchEnd(e), { passive: false });
+        document.addEventListener('touchcancel', (e) => this.handleTouchEnd(e), { passive: false });
 
         this.updateCharacterPosition();
     }
@@ -50,7 +52,23 @@ class PoopGame {
 
         e.preventDefault();
         const touch = e.touches[0];
-        const screenCenterX = this.gameScreen.offsetWidth / 2;
+        const screenCenterX = window.innerWidth / 2;
+
+        if (touch.clientX < screenCenterX) {
+            this.keys.left = true;
+            this.keys.right = false;
+        } else {
+            this.keys.right = true;
+            this.keys.left = false;
+        }
+    }
+
+    handleTouchMove(e) {
+        if (!this.gameRunning) return;
+
+        e.preventDefault();
+        const touch = e.touches[0];
+        const screenCenterX = window.innerWidth / 2;
 
         if (touch.clientX < screenCenterX) {
             this.keys.left = true;
