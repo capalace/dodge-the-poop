@@ -10,6 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     overflow: hidden;
 }
@@ -19,6 +20,7 @@ body {
     width: 100%;
     max-width: 480px;
     height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile browsers */
     margin: 0 auto;
     background: linear-gradient(to bottom, #87CEEB 0%, #98D8E8 100%);
     overflow: hidden;
@@ -91,13 +93,16 @@ body {
 @keyframes splat {
     0% {
         transform: scaleY(1);
+        transform-origin: bottom center;
     }
     50% {
         transform: scaleY(0.3) scaleX(1.5);
+        transform-origin: bottom center;
         opacity: 0.8;
     }
     100% {
         transform: scaleY(0.1) scaleX(2);
+        transform-origin: bottom center;
         opacity: 0;
     }
 }

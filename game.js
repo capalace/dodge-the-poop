@@ -48,6 +48,11 @@ class PoopGame {
     }
 
     handleTouchStart(e) {
+        // Allow touches on buttons
+        if (e.target.classList.contains('game-button')) {
+            return;
+        }
+
         if (!this.gameRunning) return;
 
         e.preventDefault();
@@ -64,6 +69,11 @@ class PoopGame {
     }
 
     handleTouchMove(e) {
+        // Allow touches on buttons
+        if (e.target.classList.contains('game-button')) {
+            return;
+        }
+
         if (!this.gameRunning) return;
 
         e.preventDefault();
@@ -80,6 +90,11 @@ class PoopGame {
     }
 
     handleTouchEnd(e) {
+        // Allow touches on buttons
+        if (e.target.classList.contains('game-button')) {
+            return;
+        }
+
         e.preventDefault();
         this.keys.left = false;
         this.keys.right = false;
